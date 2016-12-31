@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+class Subtraction
+{
+private:
+    int a,b;
+public:
+    subtract()
+{
+    a=10;
+    b=5;
+}
+subtract(int c, int d)
+{
+    a=c;
+    b=d;
+}
+subtract(subtract &obj)
+{
+    a=obj.a;
+    b=obj.b;
+}
+void display()
+{
+    cout<<"difference"<<a-b<<endl;
+}
+};
+int main()
+{
+    Subtraction  obj1;
+    Subtraction obj2(5,6);
+    Subtraction obj3(obj1);
+    obj1.display();
+    obj2.display();
+    obj3.display();
+}
